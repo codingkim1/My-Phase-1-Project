@@ -1,5 +1,8 @@
 # My-Phase-1-Project
 
+## Mobile Cash App
+
+## Author - Alex
 This JavaScript code contains functions for handling transactions in a transaction history app. The app allows users to deposit or withdraw money from their account and view their transaction history.
 
 ## Getting Started
