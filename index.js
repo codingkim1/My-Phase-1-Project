@@ -65,6 +65,8 @@
      amount: amount,
      balance: prevBalance
  }
+
+
  document.querySelector("button.Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
  document.querySelector('button.deposit-btn').addEventListener('click', handleDeposit);
  document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
