@@ -1,0 +1,25 @@
+{
+    "transaction-history":[
+        {
+            "date": "2020-01-30T12:52:08.1010",
+            "transaction-type": "deposit",
+            "amount": "1700",
+            "balance": "0",
+            "id":1
+        },
+        {
+            "date": "2020-01-30T12:55:08.1012",
+            "transaction-type": "deposit",
+            "amount": "400",
+            "balance": "1700",
+            "id":2
+        },
+        {
+            "date": "2020-01-30T12:52:08.1010",
+            "transaction-type": "deposit",
+            "amount": "500",
+            "balance": "2100",
+            "id":3
+        }
+    ]
+}
