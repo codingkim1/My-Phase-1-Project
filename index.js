@@ -65,17 +65,17 @@
      amount: amount,
      balance: prevBalance
  }
-//  document.querySelector("button.Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
-//  document.querySelector('button.deposit-btn').addEventListener('click', handleDeposit);
-//  document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
-//  //fetch the withdrawal transactions using POST in Json
-//  fetch(url, {
-//      method: "POST",
-//      body: data,
-//      headers: {
-//          "content-Type": "application/json",
-//      }
-//  })
+ document.querySelector("button.Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
+ document.querySelector('button.deposit-btn').addEventListener('click', handleDeposit);
+ document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
+ //fetch the withdrawal transactions using POST in Json
+ fetch(url, {
+     method: "POST",
+     body: data,
+     headers: {
+         "content-Type": "application/json",
+     }
+ })
 //      .then((response) => response.json())
 //      .then((data)=> {
 //          console.log(data);
