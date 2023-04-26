@@ -76,59 +76,59 @@
          "content-Type": "application/json",
      }
  })
-//      .then((response) => response.json())
-//      .then((data)=> {
-//          console.log(data);
-//          input.value ="";
-//          updateBalance(parseInt(prevBalance)-parseInt(amount));
-//          alert(`Amount Withdrawn`)
-//      })
-//  }
-//  //set up a function to update the account balance depended
-//  //on type of transaction done
-//  function updateBalance(amount){
-//      let data = {
-//          amount: amount,
-//          id: 0,
-//      };
-//  }
-//      data = JSON.stringify(data);
-//  let url = "http://localhost:3000/transaction-history";
-//  fetch(url, {
-//      method: "PUT",
-//      body: data,
-//      header:{
-//          "content-Type": "application/json",
-//      },
-//  })
-//      .then((response) => response.json())
-//      .then((data)=>{
-//          console.log(data);
-//          setInitialBalance();
-//      })
-//  //set a function to populate and update a transaction
-//  //on the browser once a transaction is done
-//  function populateTable(){
-//      let url = "http://localhost:3000/transaction-history";
-//      <tr>
-//          <th scope="row">${doc.id}</th>
-//          <td>${doc.date}</td>
-//          <td>${doc.amount}</td>
-//          <td>${doc.transaction_type}</td>
-//          <td>${doc.balance}</td>
-//      </tr>
-//      fetch(url), {
-//          method: "GET",
-//          headers:{
-//              "Content-TYpe": "Application/json",
-//          }
-//      }
-//      .then((response)=> response.json())
-//      .then((data)=> {
-//          let element = "";
-//          for (let doc of data)()=> {
-//              element = element+""
-//          }
-//      });
-//  }
-//  setBalance();
+     .then((response) => response.json())
+     .then((data)=> {
+         console.log(data);
+         input.value ="";
+         updateBalance(parseInt(prevBalance)-parseInt(amount));
+         alert(`Amount Withdrawn`)
+     })
+ }
+ //set up a function to update the account balance depended
+ //on type of transaction done
+ function updateBalance(amount){
+     let data = {
+         amount: amount,
+         id: 0,
+     };
+ }
+     data = JSON.stringify(data);
+ let url = "http://localhost:3000/transaction-history";
+ fetch(url, {
+     method: "PUT",
+     body: data,
+     header:{
+         "content-Type": "application/json",
+     },
+ })
+     .then((response) => response.json())
+     .then((data)=>{
+         console.log(data);
+         setInitialBalance();
+     })
+ //set a function to populate and update a transaction
+ //on the browser once a transaction is done
+ function populateTable(){
+     let url = "http://localhost:3000/transaction-history";
+     <tr>
+         <th scope="row">${doc.id}</th>
+         <td>${doc.date}</td>
+         <td>${doc.amount}</td>
+         <td>${doc.transaction_type}</td>
+         <td>${doc.balance}</td>
+     </tr>
+     fetch(url), {
+         method: "GET",
+         headers:{
+             "Content-TYpe": "Application/json",
+         }
+     }
+     .then((response)=> response.json())
+     .then((data)=> {
+         let element = "";
+         for (let doc of data)()=> {
+             element = element+""
+         }
+     });
+ }
+ setBalance();
