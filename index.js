@@ -23,48 +23,48 @@
      alert("Amount must be greator than zero");
      return;
  }
-//  //document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
-//  document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
-//  //determine the trancation types to done by this function
-//  let data = {
-//  date: d,
-//  transaction_type: "Deposit",
-//  amount: amount,
-//  balance: prevBalance
-//  }
-//  data = JSON.stringify(data);
-//  let url = "http://localhost:3000/transaction-history";
-//  //fetch the deposit transactions via POST in Json API
-//  fetch(url, {
-//      method: "POST",
-//      body: data,
-//      headers: {
-//          "content-Type": "application/json",
-//      },
-//  })
-//      .then((response)=>response.json())
-//      .then((data)=> {
-//          console.log(data);
-//          input.value = "";
-//          updateBalance(parseInt(prevBalance)+parseInt(amount));
-//          alert(`Amount Deposited`);
-//      });
-//  }
-//  //set up a function to handle withdrawal transactions
-//  function handleWithdrawalTransactions(){
-//      let amount = input.value;
-//      let d = new Date(Date.now());
-//      if(amount < 0 || amount === ""){
-//          alert("Amount must be greator than zero");
-//          return;
-//      }
-//  //the data below is set for withdrawal transaction type
-//  let data = {
-//      date: d,
-//      transaction_type: "Withdraw",
-//      amount: amount,
-//      balance: prevBalance
-//  }
+ //document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
+ document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
+ //determine the transaction types to done by this function
+ let data = {
+ date: d,
+ transaction_type: "Deposit",
+ amount: amount,
+ balance: prevBalance
+ }
+ data = JSON.stringify(data);
+ let url = "http://localhost:3000/transaction-history";
+ //fetch the deposit transactions via POST in Json API
+ fetch(url, {
+     method: "POST",
+     body: data,
+     headers: {
+         "content-Type": "application/json",
+     },
+ })
+     .then((response)=>response.json())
+     .then((data)=> {
+         console.log(data);
+         input.value = "";
+         updateBalance(parseInt(prevBalance)+parseInt(amount));
+         alert(`Amount Deposited`);
+     });
+ }
+ //set up a function to handle withdrawal transactions
+ function handleWithdrawalTransactions(){
+     let amount = input.value;
+     let d = new Date(Date.now());
+     if(amount < 0 || amount === ""){
+         alert("Amount must be greator than zero");
+         return;
+     }
+ //the data below is set for withdrawal transaction type
+ let data = {
+     date: d,
+     transaction_type: "Withdraw",
+     amount: amount,
+     balance: prevBalance
+ }
 //  document.querySelector("button.Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
 //  document.querySelector('button.deposit-btn').addEventListener('click', handleDeposit);
 //  document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
