@@ -6,15 +6,15 @@
 //  //    .getElementsByClassName("Withdrawal-btn")
 //  //    .addEventListener('click', handleWithdrawalTransactions);
 //  //setting the fuction for the initial balance value of the account
-//  function setInitialBalance(){
-//      let url = "http://localhost:3000/transaction-history";
-//      fetch(url, {method: "GET"})
-//      .then((response) => response.json())
-//      .then((data) =>{
-//          acc_balance.innerText = `Balance: ${data.amount} Sh`;
-//          prevBalance = data.amount;
-//      });
-//  }
+ function setInitialBalance(){
+     let url = "http://localhost:3000/transaction-history";
+     fetch(url, {method: "GET"})
+     .then((response) => response.json())
+     .then((data) =>{
+         acc_balance.innerText = `Balance: ${data.amount} Sh`;
+         prevBalance = data.amount;
+     });
+ }
 //  //set a function for deposit transactions
 //  function handleDeposit(){
 //  let amount = input.value;
