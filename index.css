@@ -27,7 +27,7 @@ button {
 }
 .buttons {
     display: block;
-    align-content: center;
+    align-content: flex-start;
     width: 100%;
     padding-left: 20%;
 }
