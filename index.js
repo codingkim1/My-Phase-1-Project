@@ -16,13 +16,13 @@
      });
  }
 //  //set a function for deposit transactions
-//  function handleDeposit(){
-//  let amount = input.value;
-//  let d = new Date(Date.now());
-//  if(amount < 0 || amount === ""){
-//      alert("Amount must be greator than zero");
-//      return;
-//  }
+ function handleDeposit(){
+ let amount = input.value;
+ let d = new Date(Date.now());
+ if(amount < 0 || amount === ""){
+     alert("Amount must be greator than zero");
+     return;
+ }
 //  //document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
 //  document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
 //  //determine the trancation types to done by this function
