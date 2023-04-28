@@ -1,21 +1,26 @@
+ document.addEventListener("DOMContentLoaded", function() {
  //Declaring the variables to use
  let acc_balance = document.getElementById('acc-balance');
  let input = document.getElementById('input-box');
  let prevBalance =0;
 //  //document
-//  //    .getElementsByClassName("Withdrawal-btn")
-//  //    .addEventListener('click', handleWithdrawalTransactions);
+//     document.getElementsByClassName("Withdrawal-btn")
+//    document.addEventListener('click', handleWithdrawalTransactions);
 //  //setting the fuction for the initial balance value of the account
  function setInitialBalance(){
      let url = "http://localhost:3000/transaction-history";
-     fetch(url, {method: "GET"})
+     fetch(url)
      .then((response) => response.json())
      .then((data) =>{
          acc_balance.innerText = `Balance: ${data.amount} Sh`;
          prevBalance = data.amount;
      });
  }
+
 //  //set a function for deposit transactions
+
+document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
+// const balanceCheck= document.getElementById('acc-balance')
  function handleDeposit(){
  let amount = input.value;
  let d = new Date(Date.now());
@@ -23,8 +28,9 @@
      alert("Amount must be greator than zero");
      return;
  }
- //document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
- document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
+
+//  document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
+//  document.querySelector('.deposit-btn').addEventListener('click', handleDeposit);
  //determine the transaction types to done by this function
  let data = {
  date: d,
@@ -41,6 +47,7 @@
      headers: {
          "content-Type": "application/json",
      },
+    //  data: JSON.stringify(data)
  })
      .then((response)=>response.json())
      .then((data)=> {
@@ -51,6 +58,8 @@
      });
  }
  //set up a function to handle withdrawal transactions
+
+ document.querySelector(".Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
  function handleWithdrawalTransactions(){
      let amount = input.value;
      let d = new Date(Date.now());
@@ -69,7 +78,7 @@
 
  document.querySelector("button.Withdrawal-btn").addEventListener('click', handleWithdrawalTransactions);
  document.querySelector('button.deposit-btn').addEventListener('click', handleDeposit);
- document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
+//  document.querySelector('button.input-box').addEventListener('click', displayDepositTransactions);
  //fetch the withdrawal transactions using POST in Json
  fetch(url, {
      method: "POST",
@@ -94,14 +103,17 @@
          id: 0,
      };
  }
-     data = JSON.stringify(data);
+    // data = JSON.stringify(data);
+    
  let url = "http://localhost:3000/transaction-history";
  fetch(url, {
      method: "PUT",
      body: data,
      header:{
          "content-Type": "application/json",
+     
      },
+    //  data: JSON.stringify(data)
  })
      .then((response) => response.json())
      .then((data)=>{
@@ -112,13 +124,14 @@
  //on the browser once a transaction is done
  function populateTable(){
      let url = "http://localhost:3000/transaction-history";
-     <tr>
+     `<tr>
          <th scope="row">${doc.id}</th>
          <td>${doc.date}</td>
          <td>${doc.amount}</td>
          <td>${doc.transaction_type}</td>
          <td>${doc.balance}</td>
-     </tr>
+     </tr>`
+     
      fetch(url), {
          method: "GET",
          headers:{
@@ -134,3 +147,4 @@
      });
  }
  setBalance();
+})
